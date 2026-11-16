@@ -1,0 +1,9 @@
+
+department,kpi,actual,target,weight,direction
+Sales,Vehicle Sales,85,100,3,higher
+Operations,Vehicle Processing Time,8,5,2,lower
+Finance,Payment Collection,92,100,3,higher
+Customer Service,Customer Satisfaction,75,90,2,higher
+Operations,Stock Accuracy,96,98,2,higher
+Marketing,Lead Conversion Rate,12,20,2,higher
+Finance,Outstanding Debts,18,10,3,lower
