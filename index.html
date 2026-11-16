@@ -1,0 +1,116 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PulseOps | Business Intelligence</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="scoring-engine.js" defer></script>
+    <script src="app.js" defer></script>
+</head>
+<body>
+
+    <aside class="sidebar">
+        <h2>PulseOps</h2>
+        <nav>
+            <a href="#">Overview</a>
+            <a href="#performance">KPI Performance</a>
+            <a href="#recommendations">Recommendations</a>
+        </nav>
+        <p class="sidebar-footer">Business Intelligence Platform</p>
+    </aside>
+
+    <main class="main">
+        <header class="topbar">
+            <div>
+                <p class="eyebrow">OPERATIONAL INTELLIGENCE</p>
+                <h1>Business Overview</h1>
+            </div>
+            <div class="actions">
+                <label for="csvFile" class="upload-button">Upload CSV</label>
+                <input type="file" id="csvFile" accept=".csv" hidden>
+                <button id="sampleBtn">Load Sample Data</button>
+            </div>
+        </header>
+
+        <section class="welcome">
+            <h2>Your business performance, simplified.</h2>
+            <p>Monitor KPIs, identify operational weaknesses and discover opportunities for improvement.</p>
+        </section>
+
+        <section class="metrics">
+            <div class="metric">
+                <p>Operational Health Score</p>
+                <h2 id="overallScore">--</h2>
+                <span>Out of 100</span>
+            </div>
+
+            <div class="metric">
+                <p>KPIs Assessed</p>
+                <h2 id="kpiCount">--</h2>
+            </div>
+
+            <div class="metric">
+                <p>KPIs Below Target</p>
+                <h2 id="belowCount">--</h2>
+            </div>
+
+            <div class="metric">
+                <p>Departments</p>
+                <h2 id="deptCount">--</h2>
+            </div>
+        </section>
+
+        <section class="dashboard-grid">
+            <div class="panel">
+                <h3>Department Performance</h3>
+                <p>Average KPI score by department</p>
+                <canvas id="departmentChart"></canvas>
+            </div>
+
+            <div class="panel">
+                <h3>Priority Areas</h3>
+                <p>Three areas requiring attention</p>
+                <div id="priorityList">No data loaded yet.</div>
+            </div>
+        </section>
+
+        <section id="performance" class="panel">
+            <h3>KPI Performance</h3>
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Department</th>
+                            <th>KPI</th>
+                            <th>Actual</th>
+                            <th>Target</th>
+                            <th>Score</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody id="kpiTable">
+                        <tr>
+                            <td colspan="6">Load your business data to begin.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section id="recommendations" class="panel">
+            <h3>Business Recommendations</h3>
+            <div id="recommendationList">
+                Recommendations will appear here.
+            </div>
+        </section>
+
+        <footer>
+            PulseOps Prototype | Business Analytics Platform
+        </footer>
+    </main>
+
+</body>
+</html>
+
